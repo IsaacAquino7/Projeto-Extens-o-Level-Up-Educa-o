@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://dud3maw771jj"]
+
+[ext_resource type="Script" uid="uid://tvvxyfod37yp" path="res://SettingsMenu.cs" id="1_svoao"]
+[ext_resource type="AudioStream" uid="uid://wj73w06bxpl7" path="res://AUD-20250926-WA0048.mp3" id="2_jttlj"]
+[ext_resource type="Texture2D" uid="uid://dwomtrgkkhj0u" path="res://assets/volume_grabber.svg" id="3_im545"]
+[ext_resource type="Texture2D" uid="uid://dvmqveqay2a35" path="res://assets/mute_on.svg" id="4_40bx1"]
+[ext_resource type="Texture2D" uid="uid://cxvm6b64j3qlk" path="res://assets/mute_off.svg" id="5_flgte"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ksya"]
+content_margin_left = 24.0
+content_margin_top = 24.0
+content_margin_right = 24.0
+content_margin_bottom = 24.0
+bg_color = Color(0.14117648, 0.20392157, 0.2784314, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qx6hv"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.20392157, 0.28627452, 0.36862746, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fud2"]
+bg_color = Color(0.16078432, 0.5019608, 0.7254902, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jttlj"]
+bg_color = Color(0.20392157, 0.28627452, 0.36862746, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oibr1"]
+bg_color = Color(0.105882354, 0.30980393, 0.44705883, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_im545"]
+bg_color = Color(0.16078432, 0.5019608, 0.7254902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40bx1"]
+bg_color = Color(0.20392157, 0.28627452, 0.36862746, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_flgte"]
+bg_color = Color(0.105882354, 0.30980393, 0.44705883, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oyw31"]
+bg_color = Color(0.16078432, 0.5019608, 0.7254902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="SettingsMenu" type="Control" unique_id=1134216140]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_svoao")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1182835247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.08235294, 0.11372549, 0.16862746, 1)
+
+[node name="TestAudioPlayer" type="AudioStreamPlayer" parent="." unique_id=2074366334]
+stream = ExtResource("2_jttlj")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1324718213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsPanel" type="PanelContainer" parent="CenterContainer" unique_id=168293296]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ksya")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/SettingsPanel" unique_id=1173764588]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=1325030203]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "CONFIGURAÇÕES"
+horizontal_alignment = 1
+
+[node name="TitleSpacer" type="Control" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=950600469]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="VolumeLabel" type="Label" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=1667404820]
+layout_mode = 2
+text = "VOLUME"
+horizontal_alignment = 1
+
+[node name="VolumeSlider" type="HSlider" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=1142227151]
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("3_im545")
+theme_override_icons/grabber_highlight = ExtResource("3_im545")
+theme_override_styles/slider = SubResource("StyleBoxFlat_qx6hv")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_7fud2")
+value = 50.0
+
+[node name="VolumeValueLabel" type="Label" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=702328409]
+layout_mode = 2
+text = "50%"
+horizontal_alignment = 1
+
+[node name="MuteCheckButton" type="CheckButton" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=1691555515]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_icons/checked = ExtResource("4_40bx1")
+theme_override_icons/unchecked = ExtResource("5_flgte")
+text = "MUTAR ÁUDIO"
+
+[node name="VideoLabel" type="Label" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=1482566764]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "VÍDEO"
+horizontal_alignment = 1
+
+[node name="FullscreenCheckButton" type="CheckButton" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=301678790]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "TELA CHEIA"
+
+[node name="ResolutionLabel" type="Label" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=7247391]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "RESOLUÇÃO"
+horizontal_alignment = 1
+
+[node name="ResolutionOptionButton" type="OptionButton" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=2142748041]
+custom_minimum_size = Vector2(250, 45)
+layout_mode = 2
+size_flags_horizontal = 4
+item_count = 3
+popup/item_0/text = "1280 x 720"
+popup/item_0/id = 0
+popup/item_1/text = "1600 x 900"
+popup/item_1/id = 1
+popup/item_2/text = "1920 x 1080"
+popup/item_2/id = 2
+
+[node name="TestarAudioButton" type="Button" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=1085743507]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_jttlj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_oibr1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_im545")
+text = "TESTAR ÁUDIO"
+
+[node name="VoltarButton" type="Button" parent="CenterContainer/SettingsPanel/VBoxContainer" unique_id=1558826993]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_40bx1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_flgte")
+theme_override_styles/hover = SubResource("StyleBoxFlat_oyw31")
+text = "VOLTAR AO MENU"
+
+[connection signal="value_changed" from="CenterContainer/SettingsPanel/VBoxContainer/VolumeSlider" to="." method="OnVolumeSliderValueChanged"]
+[connection signal="toggled" from="CenterContainer/SettingsPanel/VBoxContainer/MuteCheckButton" to="." method="OnMuteCheckButtonToggled"]
+[connection signal="toggled" from="CenterContainer/SettingsPanel/VBoxContainer/FullscreenCheckButton" to="." method="OnFullscreenCheckButtonToggled"]
+[connection signal="item_selected" from="CenterContainer/SettingsPanel/VBoxContainer/ResolutionOptionButton" to="." method="OnResolutionOptionButtonItemSelected"]
+[connection signal="pressed" from="CenterContainer/SettingsPanel/VBoxContainer/TestarAudioButton" to="." method="OnTestarAudioButtonPressed"]
+[connection signal="pressed" from="CenterContainer/SettingsPanel/VBoxContainer/VoltarButton" to="." method="OnVoltarButtonPressed"]

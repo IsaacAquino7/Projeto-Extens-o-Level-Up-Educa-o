@@ -1,0 +1,183 @@
+[gd_scene format=3 uid="uid://bx6prwqysmlrd"]
+
+[ext_resource type="Script" uid="uid://bqai626byng8b" path="res://MainMenu.cs" id="1_i26rj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwba"]
+bg_color = Color(0.20392157, 0.28627452, 0.36862746, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqj8t"]
+bg_color = Color(0.105882354, 0.30980393, 0.44705883, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f8pg8"]
+bg_color = Color(0.16078432, 0.5019608, 0.7254902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48d6w"]
+bg_color = Color(0.20392157, 0.28627452, 0.36862746, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i26rj"]
+bg_color = Color(0.105882354, 0.30980393, 0.44705883, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiy7p"]
+bg_color = Color(0.16078432, 0.5019608, 0.7254902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7a2f"]
+bg_color = Color(0.20392157, 0.28627452, 0.36862746, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qoqlk"]
+bg_color = Color(0.105882354, 0.30980393, 0.44705883, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwfq2"]
+bg_color = Color(0.16078432, 0.5019608, 0.7254902, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="Animation" id="Animation_i26rj"]
+resource_name = "MenuEntrada"
+length = 1.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/CenterContainer/VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eiy7p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/CenterContainer/VBoxContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eiy7p"]
+_data = {
+&"MenuEntrada": SubResource("Animation_i26rj"),
+&"RESET": SubResource("Animation_eiy7p")
+}
+
+[node name="MainMenu" type="Control" unique_id=1964876204]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i26rj")
+
+[node name="Background" type="ColorRect" parent="." unique_id=315947754]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.08235294, 0.11372549, 0.16862746, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=964492751]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=946295690]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer" unique_id=1964633438]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=586230758]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "NOME DO JOGO"
+horizontal_alignment = 1
+
+[node name="JogarButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=2120494165]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_kjwba")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dqj8t")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f8pg8")
+text = "JOGAR"
+
+[node name="ConfiguracoesButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=314719001]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_48d6w")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_i26rj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eiy7p")
+text = "CONFIGURAÇÕES"
+
+[node name="SairButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=786531277]
+custom_minimum_size = Vector2(250, 60)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7a2f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qoqlk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iwfq2")
+text = "SAIR"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1564407362]
+libraries/ = SubResource("AnimationLibrary_eiy7p")
+autoplay = &"MenuEntrada"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/JogarButton" to="." method="OnJogarButtonPressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/ConfiguracoesButton" to="." method="OnConfiguracoesButtonPressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/VBoxContainer/SairButton" to="." method="OnSairButtonPressed"]

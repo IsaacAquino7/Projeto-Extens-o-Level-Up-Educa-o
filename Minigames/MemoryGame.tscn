@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://dj26akfycpgdc"]
+
+[ext_resource type="Script" uid="uid://cbgsy1c77tjp" path="res://Minigames/MemoryGame.cs" id="1_tih1a"]
+[ext_resource type="AudioStream" uid="uid://bur18iw01xgok" path="res://audio/acerto.wav" id="2_kvtqo"]
+[ext_resource type="AudioStream" uid="uid://dji7jp8sr7ldq" path="res://audio/erro.wav" id="3_th8t8"]
+
+[node name="MemoryGame" type="Control" unique_id=831324743]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tih1a")
+
+[node name="Background" type="ColorRect" parent="." unique_id=408416246]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.08235294, 0.11372549, 0.16862746, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1250427037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=4223411]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer" unique_id=430466595]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TituloLabel" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=406111120]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "JOGO DA MEMÓRIA CULTURAL"
+horizontal_alignment = 1
+
+[node name="TabuleiroGrid" type="GridContainer" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=2126367213]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 4
+
+[node name="Carta01" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=859039050]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta02" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1811152375]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta03" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1619579582]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta04" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1229403713]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta05" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1784840940]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta06" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1069189222]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta07" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=585327119]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta08" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=731133451]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta09" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=853384461]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta10" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=74371048]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta11" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=949085086]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta12" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=44093866]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta13" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=704466976]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta14" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1043891546]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta15" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1295892304]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="Carta16" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/TabuleiroGrid" unique_id=1382563195]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "?"
+
+[node name="VoltarButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1240099547]
+custom_minimum_size = Vector2(200, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "VOLTAR"
+
+[node name="VitoriaContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=410008284]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 15
+
+[node name="VitoriaLabel" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer/VitoriaContainer" unique_id=2067789209]
+custom_minimum_size = Vector2(400, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "PARABÉNS! VOCÊ ENCONTROU TODOS OS PARES!"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="JogarNovamenteButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer/VitoriaContainer" unique_id=337906365]
+custom_minimum_size = Vector2(250, 55)
+layout_mode = 2
+text = "JOGAR NOVAMENTE"
+
+[node name="AcertoPlayer" type="AudioStreamPlayer" parent="." unique_id=1755242553]
+stream = ExtResource("2_kvtqo")
+
+[node name="ErroPlayer" type="AudioStreamPlayer" parent="." unique_id=454856313]
+stream = ExtResource("3_th8t8")

@@ -1,0 +1,21 @@
+# Godot 4+
+.godot/
+/android/
+
+# C# e .NET
+**/bin/
+**/obj/
+.vs/
+
+# Arquivos locais do Visual Studio
+*.user
+*.suo
+
+# Arquivos temporários
+*.tmp
+*.bak
+
+# Arquivos com informações sensíveis
+.env
+.env.*
+!.env.example

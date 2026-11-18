@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://c6tfy2b7jgwsn"]
+
+[ext_resource type="Script" uid="uid://pnejrkm0osn1" path="res://GameSelection.cs" id="1_qvtvw"]
+
+[node name="GameSelection" type="Control" unique_id=2031776725]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qvtvw")
+
+[node name="Background" type="ColorRect" parent="." unique_id=899626824]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.08235294, 0.11372549, 0.16862746, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=158625959]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer" unique_id=674112083]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer" unique_id=1750558743]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TituloLabel" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=919598852]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "ESCOLHA SEU JOGO"
+horizontal_alignment = 1
+
+[node name="MemoriaButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=236260749]
+custom_minimum_size = Vector2(350, 65)
+layout_mode = 2
+text = "JOGO DA MEMÓRIA"
+
+[node name="ContadorButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=1312601967]
+custom_minimum_size = Vector2(350, 65)
+layout_mode = 2
+text = "CONTADOR DO RIO"
+
+[node name="SilabasButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=2122666924]
+custom_minimum_size = Vector2(350, 65)
+layout_mode = 2
+text = "CAÇA-SÍLABAS"
+
+[node name="VoltarButton" type="Button" parent="MarginContainer/CenterContainer/VBoxContainer" unique_id=2124277094]
+custom_minimum_size = Vector2(350, 65)
+layout_mode = 2
+text = "VOLTAR AO MENU"
